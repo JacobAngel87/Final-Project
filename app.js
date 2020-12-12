@@ -6,9 +6,9 @@
 */
 
 // Global API Variables
-var APIStart = "http://api.openweathermap.org/data/2.5/weather?zip=";
+var APIStart = "https://api.openweathermap.org/data/2.5/weather?zip=";
 var APIKey = "28867ee80da78a0bb42e1d4e6db1aa7d";
-var iconURL = "http://openweathermap.org/img/wn/"
+var iconURL = "https://openweathermap.org/img/wn/"
 var iconEndUrl = "@2x.png"
 // regex Expression for US Zip Codes
 var validZipCode = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
