@@ -1,3 +1,5 @@
-# Final-Project
-Created By Jacob Angel
-Final Project for Web Dev 2
+# Final-Project (Weather App)
+
+Created By Jacob Angel.
+
+---
