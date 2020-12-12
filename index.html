@@ -1,0 +1,90 @@
+<!--
+    Author: Jacob Angel
+    Date: 12/12/2020
+    Class: Web Dev 2
+    Instructor: Kirsten Markley
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Axios CDN -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Vue Js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- My CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Icon -->
+    <link rel="icon" href="Images/icon.png">
+    <!-- Title -->
+    <title>Weather App</title>
+  </head>
+  <body>
+    <!-- Vue App -->
+    <div id="app">
+        <!-- Heading Container -->
+        <div class="container text-center" id="header">
+            <h1>Whats The Weather Like?</h1>
+        </div>
+        <!-- Main Body Row -->
+        <div id="main" class="row">
+            <!-- Data Form Column -->
+            <div class="column">
+                <!-- Form -->
+                <form id="form">
+                    <!-- Form Note -->
+                    <p id="note" class="text-center">Note that any field with an * is Required.</p>
+                    <!-- Zip Code Data Field -->
+                    <div class="form-group">
+                    <label for="zipCode">Zip Code*</label>
+                    <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Please Enter your Zip Code" maxlength="5">
+                    </div>
+                    <!-- Name Data Field -->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="John Doe">
+                    </div>
+                    <!-- Temperature Unit Data Field -->
+                    <div class="form-group">
+                        <label for="unit">Unit for Temperature*</label>
+                        <select class="form-control" id="unit" name="unit">
+                            <option value="0">Fahrenheit</option>
+                            <option value="1">Celcius</option>
+                        </select>
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="button" class="btn btn-secondary" v-on:click="validateForm">Get the Current Weather!</button>
+                </form>
+            </div>
+            <!-- Result Card Column -->
+            <div class="column">
+                <!-- Bootstrap Card (Hidden to Start)-->
+                <div class="card" id="card" style="opacity: 0;">
+                    <!-- Img for card -->
+                    <img class="card-img-top" v-bind:src="icon" alt="Weather Icon">
+                    <!-- Body of Card -->
+                    <div class="card-body">
+                        <!-- Card Text -->
+                        <h4 class="card-title">{{mainWeather}}</h4>
+                        <p class="card-text">{{weatherDesc}}</p>
+                    </div>
+                    <!-- Additonal Data for Card (Temperature Data)-->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Current Temperature for {{city}} is : {{currentTemp}}{{tempUnit}}&#176;</li>
+                            <li class="list-group-item">Current High for {{city}} is : {{highTemp}}{{tempUnit}}&#176;</li>
+                            <li class="list-group-item">Current Low for {{city}} is : {{lowTemp}}{{tempUnit}}&#176;</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- My Javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>

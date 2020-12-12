@@ -1,0 +1,70 @@
+/*
+    Author: Jacob Angel
+    Date: 12/12/2020
+    Class: Web Dev 2
+    Instructor: Kirsten Markley
+*/
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Langar&display=swap");
+
+/* Background Image, Font, and Color */
+body {
+  background: url(Images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  color: black;
+  font-family: "Langar", cursive;
+}
+
+/* Header Font Size */
+#header h1 {
+  font-size: 5em;
+}
+
+/* Main Data Row Styles */
+form,
+#card {
+  width: 90%;
+  margin-left: 5%;
+  background: lightgray;
+}
+/* Form Data Field Spacing */
+.form-group {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+/* Font Size for Form Data Field Labels*/
+label {
+  font-size: 1.2em;
+}
+
+/* Styles for the Form Note */
+#note {
+  border-bottom: solid black 2px;
+  font-size: 20px;
+}
+
+/* Row and Column Sizing */
+.row {
+  width: 100%;
+}
+.column {
+  width: 50%;
+}
+
+/* Overwriting the Default bootstrap card-img sizing */
+.card-img-top {
+  width: 100%;
+  height: 20em;
+  object-fit: cover;
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 800px) {
+  /* Displays the Form and column on top of eachother (Vertically) instead of next to eachother (Horizontally)*/
+  .column {
+    width: 100%;
+    margin-left: 2%;
+  }
+}
